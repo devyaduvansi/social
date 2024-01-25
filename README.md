@@ -3,86 +3,93 @@
 ## Installation
 
 ### Prerequisites
-- Python 3.x
+- Python 3.11.x
 - pip
 
-### Setup Virtual Environment (Optional but recommended)
+# Setup Virtual Environment (Optional but recommended)
+
+
+## 1.- Create a virtual environment
 ```bash
-
-### Create a virtual environment
 python -m venv venv
+```
+## 2.-Activate the virtual environment
 
-# Activate the virtual environment
-# On Windows
+### On Windows
+```bash
 .\venv\Scripts\activate
-# On Linux/Mac
+```
+### On Linux/Mac
+```bash
 source venv/bin/activate
-
-### Install Dependencies
-
+```
+## 3.- Install Dependencies
+```bash
 pip install -r requirements.txt
-
-### Run database migrations
+```
+## 4.- Run database migrations
+```bash
 python manage.py makemigrations
 python manage.py migrate
-
-### Create an admin user to access the Django admin panel (optional)
+```
+## 5.- Create an admin user to access the Django admin panel (optional)
+```bash
 python manage.py createsuperuser
-
-### Run the Development Server
-
+```
+## 6.- Run the Development Server
+```bash
 python manage.py runserver
-
+```
 The development server will be accessible at http://127.0.0.1:8000/.
 
-### Postman Collection is available in the same directory
+# Note: Postman Collection is available in the same directory
 
 
-### API Endpoints
+# API Endpoints
 
 
-User Signup:
+## User Signup:
 
-URL: /api/signup/
-Method: POST
-Fields: email, password
-User Login:
+URL: /api/signup/<br>
+Method: POST<br>
+Fields: email, password<br>
 
-URL: /api/login/
-Method: POST
-Fields: email, password
-User Search:
+## User Login:
+URL: /api/login/<br>
+Method: POST<br>
+Fields: email, password<br>
 
-URL: /api/search/
-Method: GET
-Fields: search_keyword
+## User Search:
+URL: /api/search/<br>
+Method: GET<br>
+Fields: search_keyword<br>
 
-Friend Requests:
-URL: /api/friend/request/
-Method: POST
-Fields: to_user_id
+## Friend Requests:
+URL: /api/friend/request/<br>
+Method: POST<br>
+Fields: to_user_id<br>
 
-Accept Friend Request:
-URL: /api/friend/accept/
-Method: POST
-Fields: friendship_id
+## Accept Friend Request:
+URL: /api/friend/accept/<br>
+Method: POST<br>
+Fields: friendship_id<br>
 
-Reject Friend Request:
-URL: /api/friend/reject/
-Method: POST
-Fields: friendship_id
+## Reject Friend Request:
+URL: /api/friend/reject/<br>
+Method: POST<br>
+Fields: friendship_id<br>
 
-List Friends:
-URL: /api/friend/list/
-Method: GET
+## List Friends:
+URL: /api/friend/list/<br>
+Method: GET<br>
 
-List Pending Friend Requests:
-URL: /api/friend/pending_requests/
-Method: GET
+## List Pending Friend Requests:
+URL: /api/friend/pending_requests/<br>
+Method: GET<br>
 
-Rate Limiting
+# Rate Limiting
 Users cannot send more than 3 friend requests within a minute.
 
-Contribution
+# Contribution
 Feel free to contribute or report issues.
 
